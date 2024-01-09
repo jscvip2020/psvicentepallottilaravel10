@@ -88,10 +88,10 @@
                         </div>
                         <div class="md:w-1/2 ml-4">
                             <x-input-label for="email" :value="__('Email')" />
-                            <x-text-input id="email" class="block w-full" type="text" name="email"
-                                value="{{ old('email') }}"
+                            <x-text-input id="email" class="block w-full" type="email" name="email"
+                                value="{{ old('email') }}"/>
                                 <x-input-error :messages="$errors->get('email')" class="mt-2" texto="" />
-                                />
+                                
                         </div>
 
                         <div class="m-4">

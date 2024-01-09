@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('celular')->nullable();
             $table->boolean('whatsapp')->default(0);
             $table->string('email');
-            $table->string('localizacao')->nullable();
+            $table->text('localizacao')->nullable();
             $table->timestamps();
         });
     }
