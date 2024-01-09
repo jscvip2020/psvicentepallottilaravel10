@@ -57,7 +57,11 @@ class AppServiceProvider extends ServiceProvider
         view()->composer(['layouts.front'], function($view){
             $contatoFront = Contato::where('whatsapp',1)->first();
             $t = ['(', ')', ' ', '-'];
-            $whatsapp = str_replace($t,'',$contatoFront->celular);
+            if (isset($contatoFront)) {
+                $whatsapp = str_replace($t, '', $contatoFront->celular);
+            }else{
+                $whatsapp = "";
+            }
             $view->with('whatsapp',$whatsapp);
         });
 
