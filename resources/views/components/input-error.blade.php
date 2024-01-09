@@ -7,5 +7,5 @@
         @endforeach
     </ul>
 @else
-    <p class="text-gray-500 text-xs italic mt-2">{{$texto}}</p>
+    <p class="text-gray-500 text-xs italic mt-2">{{(isset($texto))?$texto:""}}</p>
 @endif
